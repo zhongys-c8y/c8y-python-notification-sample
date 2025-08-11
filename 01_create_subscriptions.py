@@ -11,7 +11,13 @@ from c8y_api.model import ManagedObject, Subscription, DeviceInventory
 subscription_name = 'mySubscription'
 
 def main():
+    # Have the following environment variables set:
+    # C8Y_BASEURL (e.g. 'example.cumulocity.com')
+    # C8Y_TENANT ('t1234')
+    # C8Y_USER (e.g. 'john.doe')
+    # C8Y_PASSWORD (e.g. 'secret')
     c8y = SimpleCumulocityApp()
+    
     print("CumulocityApp initialized")
     print(f"{c8y.base_url}, Tenant: {c8y.tenant_id}, User:{c8y.username}")
 
